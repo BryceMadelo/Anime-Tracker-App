@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1034669873831",
+    "project_id": "anime-track-45ed0",
+    "storage_bucket": "anime-track-45ed0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034669873831:android:8199f751f2fb2f044ed982",
+        "android_client_info": {
+          "package_name": "com.example.anime_track"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034669873831-98mtis0cmgko55ald1af74taform1b3n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anime_track",
+            "certificate_hash": "215d8d4ba557be8589d42b8d15e85b338ce00638"
+          }
+        },
+        {
+          "client_id": "1034669873831-lkjrb6db5oq70etq7nl3p2fl8vnlbkh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVRJfDJHkQKmaCcjfx1QhLdbIUpwxdemI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034669873831-lkjrb6db5oq70etq7nl3p2fl8vnlbkh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

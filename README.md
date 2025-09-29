@@ -1,16 +1,23 @@
-# anime_track
+# Anime Tracker
 
-A new Flutter project.
+Anime Tracker is a simple Flutter application that allows users to track, search, and organize their favorite anime and webtoon series. It’s designed to provide a clean and intuitive interface for anime fans to manage their watchlist.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Add anime and webtoons to your personal watchlist
+- Categorize titles as Watching, Completed, or Planned
+- Progress Bar for both watching and reading
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter (Frontend & UI)
+- Dart (Programming Language)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+ 1. Clone the repository:
+    - git clone https://github.com/BryceMadelo/Anime-Tracker-App.git
+    - cd Anime-Tracker-App
+ 2. Install dependencies:
+    - flutter pub get
+ 3. Run the app:
+    - flutter run

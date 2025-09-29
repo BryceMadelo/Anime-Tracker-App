@@ -4,10 +4,22 @@ import 'firebase_options.dart';
 import 'screens/signup_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/dashboard_screen.dart';
+import 'screens/anime_list_screen.dart';
+import 'screens/webtoon_list_screen.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  try {
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
+    }
+  } catch (e) {
+    // Catch duplicate-app or other init errors
+    debugPrint("Firebase init error: $e");
+  }
+
   runApp(const AnimeTrackerApp());
 }
 
@@ -25,6 +37,8 @@ class AnimeTrackerApp extends StatelessWidget {
         '/login': (_) => const LoginScreen(),
         '/signup': (_) => const SignupScreen(),
         '/dashboard': (_) => const DashboardScreen(),
+        '/anime-list': (_) => const AnimeListScreen(),
+        '/webtoon-list': (_) => const WebtoonListScreen(),
       },
     );
   }
@@ -72,9 +86,9 @@ class WelcomeScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(context, '/signup'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.purple,
+                  backgroundColor: Color(0xFF9333EA),
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 70,
+                    horizontal: 75,
                     vertical: 15,
                   ),
                   shape: RoundedRectangleBorder(
@@ -83,14 +97,18 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 child: const Text(
                   "Sign Up",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(height: 15),
               OutlinedButton(
                 onPressed: () => Navigator.pushNamed(context, '/login'),
                 style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: Colors.purple, width: 2),
+                  side: const BorderSide(color: Color(0xFF9333EA), width: 2),
                   padding: const EdgeInsets.symmetric(
                     horizontal: 80,
                     vertical: 15,
@@ -101,7 +119,11 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 child: const Text(
                   "Login",
-                  style: TextStyle(color: Colors.purple),
+                  style: TextStyle(
+                    color: Color(0xFF9333EA),
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],

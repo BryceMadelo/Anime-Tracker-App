@@ -161,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const Text(
                 "Welcome Back",
                 style: TextStyle(
-                  color: Colors.purpleAccent,
+                  color: Color(0xFF9333EA),
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
@@ -207,7 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: ElevatedButton(
                   onPressed: _isLoading ? null : _loginEmail,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purpleAccent,
+                    backgroundColor: Color(0xFF9333EA),
                     padding: const EdgeInsets.symmetric(vertical: 14),
                   ),
                   child: _isLoading
@@ -221,7 +221,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         )
                       : const Text(
                           "Login",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                 ),
               ),
@@ -242,7 +245,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text(
                       "Sign Up",
                       style: TextStyle(
-                        color: Colors.purpleAccent,
+                        color: Color(0xFF9333EA),
                         fontWeight: FontWeight.bold,
                       ),
                     ),

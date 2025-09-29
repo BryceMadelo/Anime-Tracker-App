@@ -20,7 +20,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   bool _isLoading = false;
 
-  // ---------- Helpers ----------
+  // Helpers
   InputDecoration _fieldDecoration(String hint) {
     return InputDecoration(
       hintText: hint,
@@ -57,7 +57,7 @@ class _SignupScreenState extends State<SignupScreen> {
     }, SetOptions(merge: true));
   }
 
-  // ---------- Email/Password Signup ----------
+  // Email/Password Signup
   Future<void> _signUpEmail() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _isLoading = true);
@@ -82,7 +82,7 @@ class _SignupScreenState extends State<SignupScreen> {
     }
   }
 
-  // ---------- Google Sign-In ----------
+  // Google Sign-In
   Future<void> _signInWithGoogle() async {
     setState(() => _isLoading = true);
     try {
@@ -122,7 +122,7 @@ class _SignupScreenState extends State<SignupScreen> {
     }
   }
 
-  // ---------- Facebook Sign-In ----------
+  // Facebook Sign-In
   Future<void> _signInWithFacebook() async {
     setState(() => _isLoading = true);
     try {
@@ -159,7 +159,7 @@ class _SignupScreenState extends State<SignupScreen> {
     }
   }
 
-  // ---------- UI ----------
+  // UI
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -181,7 +181,7 @@ class _SignupScreenState extends State<SignupScreen> {
               const Text(
                 "Create Account",
                 style: TextStyle(
-                  color: Colors.purpleAccent,
+                  color: Color(0xFF9333EA),
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
@@ -257,7 +257,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       width: double.infinity,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.purpleAccent,
+                          backgroundColor: Color(0xFF9333EA),
                           padding: const EdgeInsets.symmetric(vertical: 14),
                         ),
                         onPressed: _isLoading ? null : _signUpEmail,
@@ -272,7 +272,10 @@ class _SignupScreenState extends State<SignupScreen> {
                               )
                             : const Text(
                                 "Sign Up",
-                                style: TextStyle(fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                       ),
                     ),

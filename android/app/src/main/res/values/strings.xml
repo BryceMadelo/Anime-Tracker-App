@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Anime Tracker</string>
+    <string name="facebook_app_id">4253842228197082</string>
+    <string name="facebook_client_token">${FACEBOOK_CLIENT_TOKEN}</string>
+    <string name="fb_login_protocol_scheme">fb${FACEBOOK_APP_ID}</string>
+</resources>
